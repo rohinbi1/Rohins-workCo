@@ -1,0 +1,21 @@
+<div
+  *ngFor="let p of products; let i = index"
+  class="flex"
+  [ngStyle]="{
+    backgroundColor: p.product === 'available' ? 'AliceBlue' : 'Beige'
+  }"
+>
+  <p>{{ i }}</p>
+  <p class="p-2">id:{{ p.id }}</p>
+  <p class="p-2">Name:{{ p.id }}</p>
+  <p class="p-2">price:{{ p.price }}</p>
+  <p class="p-2">color:{{ p.color }}</p>
+  <p
+    class="p-2"
+    [ngStyle]="{ color: p.product === 'available' ? 'green' : 'red' }"
+  >
+    product:{{ p.product }}
+  </p>
+  <button class="m-1">Show More</button>
+  <button class="m-1">Buy Now</button>
+</div>

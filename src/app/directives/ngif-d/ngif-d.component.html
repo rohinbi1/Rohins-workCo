@@ -1,0 +1,32 @@
+<div>
+  <b>Search:</b>
+  <input type="text" [(ngModel)]="searchValue" />
+  <p *ngIf="searchValue != ''">The value you search for "{{ searchValue }}"</p>
+</div>
+
+<div
+  *ngFor="let p of products; let i = index"
+  class="flex"
+  [ngStyle]="{
+    backgroundColor: p.product === 'available' ? 'AliceBlue' : 'Beige'
+  }"
+>
+  <p>{{ i }}</p>
+  <p class="p-2">id:{{ p.id }}</p>
+  <p class="p-2">Name:{{ p.id }}</p>
+  <p class="p-2">price:{{ p.price }}</p>
+  <p class="p-2">color:{{ p.color }}</p>
+  <p
+    class="p-2"
+    [ngStyle]="{ color: p.product === 'available' ? 'green' : 'red' }"
+  >
+    product:{{ p.product }}
+  </p>
+  <button class="m-1">Show More</button>
+  <button class="ml-2 mt-2" *ngIf="p.product === 'available'; else notifyme">
+    Buy Now
+  </button>
+  <ng-template #notifyme>
+    <button>Notify Me</button>
+  </ng-template>
+</div>

@@ -1,0 +1,10 @@
+<div>
+  <label>DOB:</label>
+  <input type="date" #dobinput (blur)="calulateAge()" />
+</div>
+<div>
+  <label>Age:</label>
+  <input type="text" #ageinput />
+</div>
+<div><app-demos></app-demos></div>
+{{ demoComp.sayHello() }}

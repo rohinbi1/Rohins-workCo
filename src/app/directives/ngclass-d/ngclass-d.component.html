@@ -1,0 +1,9 @@
+<div [ngClass]="{ changeBackground: searchValue != '' }">
+  <b>Search:</b><input type="text" [(ngModel)]="searchValue" />
+  <p *ngIf="searchValue != ''">the value u searched for "{{ searchValue }}"</p>
+</div>
+
+<div [ngClass]="{ fadOut: displayNotification }">
+  This sentence will fadout
+  <div><button (click)="onClick()">X</button></div>
+</div>

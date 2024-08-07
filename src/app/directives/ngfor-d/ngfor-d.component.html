@@ -1,0 +1,11 @@
+<div *ngFor="let item of [1, 2, 3]">
+  <p>number is :{{ item }}</p>
+</div>
+<div *ngFor="let p of products; let i = index" class="flex">
+  <p>{{ i }}</p>
+  <p class="p-2">id:{{ p.id }}</p>
+  <p class="p-2">Name:{{ p.id }}</p>
+  <p class="p-2">price:{{ p.price }}</p>
+  <p class="p-2">color:{{ p.color }}</p>
+  <p class="p-2">product:{{ p.product }}</p>
+</div>
