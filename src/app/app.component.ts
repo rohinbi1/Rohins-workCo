@@ -71,6 +71,7 @@ export class AppComponent implements OnInit {
   //     return vals >= 30;
   //   })
   // );
+
   counterObs = interval(1000);
   countetrSub: any;
   ngOnInit() {
